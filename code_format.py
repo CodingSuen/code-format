@@ -1,9 +1,3 @@
-# 格式化/home/Channel.cpp文件
-# python format.py -path=/home -file=Channel.cpp -i -style=Google
-
-# 格式化/home路径下所有的文件
-# python format.py -path=/home -i -style=Google
-
 import argparse
 import re
 import subprocess
