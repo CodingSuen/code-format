@@ -16,7 +16,7 @@ parser.add_argument('-i',
     default=False,
     help='apply edits to files instead of displaying a diff')
 parser.add_argument('-style',
-    help='formatting style to apply (LLVM, Google, Chromium, Mozilla, WebKit)')
+    help='formatting style to apply (llvm, google, chromium, mozilla, webkit or file)')
 parser.add_argument('-path',
     help='specify the path of the files to be formatted')
 parser.add_argument('-file',
@@ -70,10 +70,10 @@ def main():
     if regex_path.match(str(file_path)):
         scaner_files(file_path, file_list)
         if args.style:
-            if args.style == 'LLVM' or args.style == 'Google' or args.style == 'Chromium' or args.style == 'Mozilla' or args.style == 'WebKit':
+            if args.style == 'llvm' or args.style == 'google' or args.style == 'chromium' or args.style == 'mozilla' or args.style == 'webkit' or args.style == 'file':
                 format_command.extend(['-style', args.style])
             else:
-                sys.exit("-systel shuould be LLVM, Google, Chromium, Mozilla or WebKit")
+                sys.exit("-systel shuould be llvm, google, chromium, mozilla, webkit or file")
                 exit()
         if args.i:
             format_command.append('-i')
