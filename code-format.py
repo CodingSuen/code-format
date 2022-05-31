@@ -38,7 +38,9 @@ def scaner_files(file_path, file_list):
         file = os.listdir(file_path)
         for f in file:
             real_filepath = path.join(file_path, f)
-            if path.isfile(real_filepath):
+            if path.islink(real_filepath):
+                pass
+            elif path.isfile(real_filepath):
                 if regex_file.match(f):
                     file_list.append(real_filepath)
             elif path.isdir(real_filepath):
