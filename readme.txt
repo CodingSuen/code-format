@@ -30,4 +30,4 @@ When using -style=file, clang-format for each input file will try to find the .c
 使用-style=file时，对clang-format命令会优先查找位于输入文件最近的父目录中的. Clang-format文件
 
 注意：
-对于软连接文件，会破坏软连接，生产格式化后的新文件。当时用-path格式化所有路径下的文件时，需要注意这点。
+对于软连接文件，会破坏软连接，生产格式化后的新文件。当时用-path格式化所有路径下的文件时，需要注意这点。已经修复，自测通过。
